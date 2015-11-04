@@ -129,7 +129,7 @@ Copyright 2005 Apple Computer, Inc., All Rights Reserved
 {
 	NSString *servicePrincipal = [[self connection] servicePrincipal];
 	
-	if (servicePrincipal == nil) [NSString stringWithFormat:@"xgrid/%@", [self name]];
+	if (servicePrincipal == nil) servicePrincipal = [NSString stringWithFormat:@"xgrid/%@", [self name]];
 	
 	return servicePrincipal;
 }
